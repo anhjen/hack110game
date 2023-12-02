@@ -1,4 +1,4 @@
-"""Interactive Hunger Games Based Movie."""
+"""Starting Slide."""
 
 import pygame, sys
 
@@ -17,23 +17,17 @@ while running:
             running = False
     pygame.display.update()
 
-    image_path = "assets/FirstScene.png"
+    image_path = "assets/hunger-games.png"
     og_back = pygame.image.load(image_path)
     background = pygame.transform.scale(og_back, (width, height))
     back_rect = background.get_rect()
-
-    image_path2 = "assets/Shrek_(character).png"
-    og_shrek = pygame.image.load(image_path2)
-    shrek = pygame.transform.scale(og_shrek, (width/8, height/3))
-    shrek_rect = shrek.get_rect()
-    shrek_rect.center = (width/1.6, height/1.4)  
 
     text_color = (255, 255, 255)
     font = pygame.font.Font(None, 36)
     box_x, box_y = (width - width) // 2, 160
     text_x, text_y = box_x, box_y
 
-    text_surface = font.render("Welcome to the 80th annual Hunger Games! You are Shrek, and you have been chosen as tribute during the Reaping.", True, text_color)
+    text_surface = font.render("Start", True, text_color)
 
     while True:
         for event in pygame.event.get():
